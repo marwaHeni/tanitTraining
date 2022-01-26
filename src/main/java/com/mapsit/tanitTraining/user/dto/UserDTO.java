@@ -1,7 +1,7 @@
 package com.mapsit.tanitTraining.user.dto;
 
-import com.mapsit.tanitTraining.config.Constants;
-import com.mapsit.tanitTraining.authority.Authority;
+import com.mapsit.tanitTraining.user.authority.Authority;
+import com.mapsit.tanitTraining.user.authority.Constants;
 import com.mapsit.tanitTraining.user.User;
 
 import javax.validation.constraints.Email;

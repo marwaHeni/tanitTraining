@@ -1,6 +1,6 @@
 package com.mapsit.tanitTraining.security;
 
-import com.mapsit.tanitTraining.config.Constants;
+import com.mapsit.tanitTraining.user.authority.Constants;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.stereotype.Component;
 

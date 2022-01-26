@@ -1,15 +1,15 @@
 package com.mapsit.tanitTraining.user.account;
 
+import com.mapsit.tanitTraining.mail.MailService;
+import com.mapsit.tanitTraining.security.SecurityUtils;
 import com.mapsit.tanitTraining.user.User;
 import com.mapsit.tanitTraining.user.UserRepository;
-import com.mapsit.tanitTraining.security.SecurityUtils;
-import com.mapsit.tanitTraining.mail.MailService;
 import com.mapsit.tanitTraining.user.UserService;
 import com.mapsit.tanitTraining.user.dto.PasswordChangeDTO;
-import com.mapsit.tanitTraining.user.dto.UserDTO;
 import com.mapsit.tanitTraining.errors.EmailAlreadyUsedException;
 import com.mapsit.tanitTraining.errors.InvalidPasswordException;
 import com.mapsit.tanitTraining.errors.LoginAlreadyUsedException;
+import com.mapsit.tanitTraining.user.dto.UserDTO;
 import com.mapsit.tanitTraining.user.vm.KeyAndPasswordVM;
 import com.mapsit.tanitTraining.user.vm.ManagedUserVM;
 import org.apache.commons.lang3.StringUtils;

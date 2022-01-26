@@ -13,10 +13,6 @@ import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
 import java.time.Instant;
 
-/**
- * Base abstract class for entities which will hold definitions for created, last modified, created by,
- * last modified by attributes.
- */
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 public abstract class AbstractAuditingEntity implements Serializable {
@@ -74,4 +70,5 @@ public abstract class AbstractAuditingEntity implements Serializable {
     public void setLastModifiedDate(Instant lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
     }
+
 }

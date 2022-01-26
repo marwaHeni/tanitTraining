@@ -1,11 +1,11 @@
 package com.mapsit.tanitTraining.security;
 
 import com.mapsit.tanitTraining.user.User;
+import com.mapsit.tanitTraining.user.UserRepository;
 import org.hibernate.validator.internal.constraintvalidators.hv.EmailValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.GrantedAuthority;
-import com.mapsit.tanitTraining.user.UserRepository;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

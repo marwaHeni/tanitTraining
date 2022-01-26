@@ -1,11 +1,11 @@
 package com.jhipster.demo.mono.service;
 
 import com.mapsit.tanitTraining.TanitTrainingApplication;
-import com.mapsit.tanitTraining.config.Constants;
-import com.mapsit.tanitTraining.user.User;
-import com.mapsit.tanitTraining.security.MyWayProperties;
+import com.mapsit.tanitTraining.user.authority.Constants;
 import com.mapsit.tanitTraining.mail.MailService;
+import com.mapsit.tanitTraining.security.MyWayProperties;
 ;
+import com.mapsit.tanitTraining.user.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;

@@ -1,4 +1,4 @@
-package com.mapsit.tanitTraining.authority;
+package com.mapsit.tanitTraining.user.authority;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -12,9 +12,6 @@ import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.Objects;
 
-/**
- * An authority (a security role) used by Spring Security.
- */
 @Entity
 @Table(name = "jhi_authority")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
@@ -56,7 +53,8 @@ public class Authority implements Serializable {
     @Override
     public String toString() {
         return "Authority{" +
-            "name='" + name + '\'' +
-            "}";
+                "name='" + name + '\'' +
+                "}";
     }
+
 }

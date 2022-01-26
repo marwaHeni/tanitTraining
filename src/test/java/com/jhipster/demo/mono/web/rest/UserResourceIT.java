@@ -1,10 +1,10 @@
 package com.jhipster.demo.mono.web.rest;
 
 import com.mapsit.tanitTraining.TanitTrainingApplication;
-import com.mapsit.tanitTraining.authority.Authority;
+import com.mapsit.tanitTraining.user.authority.Authority;
+import com.mapsit.tanitTraining.security.AuthoritiesConstants;
 import com.mapsit.tanitTraining.user.User;
 import com.mapsit.tanitTraining.user.UserRepository;
-import com.mapsit.tanitTraining.security.AuthoritiesConstants;
 import com.mapsit.tanitTraining.user.dto.UserDTO;
 import com.mapsit.tanitTraining.user.vm.ManagedUserVM;
 import org.apache.commons.lang3.RandomStringUtils;

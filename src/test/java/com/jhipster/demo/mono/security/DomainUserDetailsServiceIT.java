@@ -2,9 +2,9 @@ package com.jhipster.demo.mono.security;
 
 import com.mapsit.tanitTraining.TanitTrainingApplication;
 
+import com.mapsit.tanitTraining.security.UserNotActivatedException;
 import com.mapsit.tanitTraining.user.User;
 import com.mapsit.tanitTraining.user.UserRepository;
-import com.mapsit.tanitTraining.security.UserNotActivatedException;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

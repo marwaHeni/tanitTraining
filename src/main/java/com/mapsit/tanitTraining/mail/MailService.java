@@ -1,14 +1,15 @@
 package com.mapsit.tanitTraining.mail;
 
-import com.mapsit.tanitTraining.user.User;
 import com.mapsit.tanitTraining.security.MyWayProperties;
+import com.mapsit.tanitTraining.user.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.MessageSource;
 import org.springframework.mail.MailException;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.scheduling.annotation.Async;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import org.thymeleaf.context.Context;
 import org.thymeleaf.spring5.SpringTemplateEngine;
 
@@ -18,12 +19,7 @@ import javax.mail.internet.MimeMessage;
 import java.util.Locale;
 import java.util.Properties;
 
-/**
- * Service for sending emails.
- * <p>
- * We use the {@link Async} annotation to send emails asynchronously.   tr,nht'
- */
-@Service
+@Component
 public class MailService {
 
     private final Logger log = LoggerFactory.getLogger(MailService.class);
@@ -39,6 +35,7 @@ public class MailService {
     private final SpringTemplateEngine templateEngine;
 
     private final MyWayProperties myWayProperties;
+
 
     public MailService(MyWayProperties myWayProperties, JavaMailSender javaMailSender,
                        MessageSource messageSource, SpringTemplateEngine templateEngine) {

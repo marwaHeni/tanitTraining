@@ -1,22 +1,24 @@
-package com.mapsit.tanitTraining.security;
-
+package com.mapsit.tanitTraining.security.jwt;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
 import org.springframework.web.cors.CorsConfiguration;
 
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
-@Component
-@ConfigurationProperties(prefix = "maps-it", ignoreUnknownFields = false)
+
+@ConfigurationProperties(
+        prefix = "maps-it",
+        ignoreUnknownFields = false
+)
 public class MyWayProperties {
 
     private final Security security = new Security();
     private final CorsConfiguration cors = new CorsConfiguration();
- //   private final Gateway gateway = new Gateway();
+    private final Gateway gateway = new Gateway();
     private final Mail mail = new Mail();
 
     public MyWayProperties() {
@@ -28,66 +30,66 @@ public class MyWayProperties {
     public CorsConfiguration getCors() {
         return this.cors;
     }
-//    public Gateway getGateway() {
-//        return this.gateway;
-//    }
+    public Gateway getGateway() {
+        return this.gateway;
+    }
     public Mail getMail() {
         return this.mail;
     }
 
-//    public static class Gateway {
-//        private final RateLimiting rateLimiting = new RateLimiting();
-//        private Map<String, List<String>> authorizedMicroservicesEndpoints;
-//
-//        public Gateway() {
-//            this.authorizedMicroservicesEndpoints = MyWayDefaults.Gateway.authorizedMicroservicesEndpoints;
-//        }
-//
-//        public RateLimiting getRateLimiting() {
-//            return this.rateLimiting;
-//        }
-//
-//        public Map<String, List<String>> getAuthorizedMicroservicesEndpoints() {
-//            return this.authorizedMicroservicesEndpoints;
-//        }
-//
-//        public void setAuthorizedMicroservicesEndpoints(Map<String, List<String>> authorizedMicroservicesEndpoints) {
-//            this.authorizedMicroservicesEndpoints = authorizedMicroservicesEndpoints;
-//        }
-//
-//        public static class RateLimiting {
-//            private boolean enabled = false;
-//            private long limit = 100000L;
-//            private int durationInSeconds = 3600;
-//
-//            public RateLimiting() {
-//            }
-//
-//            public boolean isEnabled() {
-//                return this.enabled;
-//            }
-//
-//            public void setEnabled(boolean enabled) {
-//                this.enabled = enabled;
-//            }
-//
-//            public long getLimit() {
-//                return this.limit;
-//            }
-//
-//            public void setLimit(long limit) {
-//                this.limit = limit;
-//            }
-//
-//            public int getDurationInSeconds() {
-//                return this.durationInSeconds;
-//            }
-//
-//            public void setDurationInSeconds(int durationInSeconds) {
-//                this.durationInSeconds = durationInSeconds;
-//            }
-//        }
-//    }
+    public static class Gateway {
+        private final RateLimiting rateLimiting = new RateLimiting();
+        private Map<String, List<String>> authorizedMicroservicesEndpoints;
+
+        public Gateway() {
+            this.authorizedMicroservicesEndpoints = MyWayDefaults.Gateway.authorizedMicroservicesEndpoints;
+        }
+
+        public RateLimiting getRateLimiting() {
+            return this.rateLimiting;
+        }
+
+        public Map<String, List<String>> getAuthorizedMicroservicesEndpoints() {
+            return this.authorizedMicroservicesEndpoints;
+        }
+
+        public void setAuthorizedMicroservicesEndpoints(Map<String, List<String>> authorizedMicroservicesEndpoints) {
+            this.authorizedMicroservicesEndpoints = authorizedMicroservicesEndpoints;
+        }
+
+        public static class RateLimiting {
+            private boolean enabled = false;
+            private long limit = 100000L;
+            private int durationInSeconds = 3600;
+
+            public RateLimiting() {
+            }
+
+            public boolean isEnabled() {
+                return this.enabled;
+            }
+
+            public void setEnabled(boolean enabled) {
+                this.enabled = enabled;
+            }
+
+            public long getLimit() {
+                return this.limit;
+            }
+
+            public void setLimit(long limit) {
+                this.limit = limit;
+            }
+
+            public int getDurationInSeconds() {
+                return this.durationInSeconds;
+            }
+
+            public void setDurationInSeconds(int durationInSeconds) {
+                this.durationInSeconds = durationInSeconds;
+            }
+        }
+    }
 
     public static class Mail {
         private boolean enabled = false;

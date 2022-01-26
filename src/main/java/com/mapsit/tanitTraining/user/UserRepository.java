@@ -12,9 +12,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-/**
- * Spring Data JPA repository for the {@link User} entity.
- */
 @Repository
 public interface UserRepository extends JpaRepository<User, UUID> {
 
@@ -42,3 +39,4 @@ public interface UserRepository extends JpaRepository<User, UUID> {
 
     Page<User> findAllByLoginNot(Pageable pageable, String login);
 }
+

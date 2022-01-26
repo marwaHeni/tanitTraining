@@ -1,8 +1,8 @@
 package com.mapsit.tanitTraining.user;
 
-import com.mapsit.tanitTraining.config.Constants;
-import com.mapsit.tanitTraining.authority.Authority;
-import com.mapsit.tanitTraining.authority.AuthorityRepository;
+import com.mapsit.tanitTraining.user.authority.Authority;
+import com.mapsit.tanitTraining.user.authority.AuthorityRepository;
+import com.mapsit.tanitTraining.user.authority.Constants;
 import com.mapsit.tanitTraining.security.AuthoritiesConstants;
 import com.mapsit.tanitTraining.security.SecurityUtils;
 import com.mapsit.tanitTraining.user.dto.UserDTO;

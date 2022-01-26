@@ -1,9 +1,6 @@
-package com.mapsit.tanitTraining.authority;
+package com.mapsit.tanitTraining.user.authority;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-/**
- * Spring Data JPA repository for the {@link Authority} entity.
- */
 public interface AuthorityRepository extends JpaRepository<Authority, String> {
 }

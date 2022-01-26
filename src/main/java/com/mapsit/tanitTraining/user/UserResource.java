@@ -1,15 +1,15 @@
 package com.mapsit.tanitTraining.user;
 
-import com.mapsit.tanitTraining.config.Constants;
-import com.mapsit.tanitTraining.security.AuthoritiesConstants;
+import com.mapsit.tanitTraining.user.authority.Constants;
+import com.mapsit.tanitTraining.errors.BadRequestAlertException;
+import com.mapsit.tanitTraining.errors.EmailAlreadyUsedException;
+import com.mapsit.tanitTraining.errors.LoginAlreadyUsedException;
 import com.mapsit.tanitTraining.mail.MailService;
+import com.mapsit.tanitTraining.security.AuthoritiesConstants;
 import com.mapsit.tanitTraining.user.dto.UserDTO;
 import com.mapsit.tanitTraining.utility.HeaderUtil;
 import com.mapsit.tanitTraining.utility.PaginationUtil;
 import com.mapsit.tanitTraining.utility.ResponseUtil;
-import com.mapsit.tanitTraining.errors.BadRequestAlertException;
-import com.mapsit.tanitTraining.errors.EmailAlreadyUsedException;
-import com.mapsit.tanitTraining.errors.LoginAlreadyUsedException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;

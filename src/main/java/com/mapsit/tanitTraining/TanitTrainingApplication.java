@@ -1,7 +1,7 @@
 package com.mapsit.tanitTraining;
 
-import com.mapsit.tanitTraining.security.MyWayProperties;
 import com.mapsit.tanitTraining.security.SpringSecurityAuditorAware;
+import com.mapsit.tanitTraining.security.jwt.MyWayProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
